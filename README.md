@@ -1,3 +1,10 @@
+OpenCraftBox Game
+OpenCraftBox Game is based on Minetest Game.
+Its goal is to improve Minetest Game.
+
+Minetest Game README:
+
+
 # Minetest Game
 
 [![ContentDB](https://content.luanti.org/packages/Minetest/minetest_game/shields/title/)](https://content.luanti.org/packages/Minetest/minetest_game/)
