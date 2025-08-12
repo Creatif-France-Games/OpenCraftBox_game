@@ -1,53 +1,60 @@
-OpenCraftBox Game
-OpenCraftBox Game is based on Minetest Game.
-Its goal is to improve Minetest Game.
+Overview
+OpenCraftBox Game is based on Minetest Game, with additions and improvements to provide a richer experience right from the start.
 
-Minetest Game README:
+It currently includes by default:
 
+Unified Inventory — an advanced inventory with item search and quick crafting.
 
-# Minetest Game
+Mesecons — a circuitry and automation system similar to redstone.
 
-[![ContentDB](https://content.luanti.org/packages/Minetest/minetest_game/shields/title/)](https://content.luanti.org/packages/Minetest/minetest_game/)
+Goals
+Create a “ready-to-play” game with essential mods pre-installed.
 
-Minetest Game (abbreviated MTG) is a simple and peaceful sandbox game, with no
-real goals or built-in enemy mobs.
+Add tools and automation systems from the start.
 
-While it provides a basic gameplay experience out of the box, it is best played
-with mods.
+Stay close to Minetest Game to maintain compatibility with existing mods.
 
-Minetest Game is in perpetual maintenance-only mode, meaning it will not see new
-gameplay features or anything else that breaks compatibility (see
-[#2710](https://github.com/minetest/minetest_game/issues/2710)).
+Installation
+Download this repository.
 
-## Installation
+Extract the folder.
 
-### ContentDB
+Place the OpenCraftBox_game folder into the games folder of Luanti.
 
-* Content > Browse Online Content
-* Search for "[Minetest Game](https://content.luanti.org/packages/Minetest/minetest_game/)"
-* Click Install
+Launch Minetest and select OpenCraftBox Game in the games menu.
 
-### Manually
+Credits
+Based on Minetest Game — © 2010-2025, the Luanti team (LGPL 2.1+)
 
-- Unzip the archive, rename the folder to `minetest_game` and
-place it in `.../minetest/games/`
+Unified Inventory
+Copyright © 2012-2014 Maciej Kasatkin (RealBadAngel)
+License: LGPL-2.0-or-later
 
-- GNU/Linux: If you use a system-wide installation place it in `~/.minetest/games/`.
+Mesecons
+Code: LGPL-3.0-or-later
+Content (textures, sounds, models): CC-BY-SA-3.0
+Includes a texture derived from "default_steel_block.png"
 
-The Luanti engine can be found at [GitHub](https://github.com/minetest/minetest).
+Author: Jean-Patrick Guerrero (kilbith)
 
-For further information or help, see: [Installing Mods](https://wiki.luanti.org/Installing_Mods).
+License: CC-BY-SA-3.0
 
-## Compatibility
+FAQ
+Q: What’s the difference from Minetest Game?
+A: OpenCraftBox Game includes Unified Inventory and Mesecons by default, as well as other upcoming adjustments, to offer more tools and features right from the start.
 
-As of January 2024 Minetest Game follows a **rolling release** model with new changes being automatically
-published on ContentDB every day.
+Q: Can I add other mods?
+A: Yes, OpenCraftBox Game remains compatible with all mods made for Minetest Game.
 
-There are no stable releases or tags, all existing ones are considered legacy.
+Q: Can I use OpenCraftBox Game on my server?
+A: Yes, you can install it just like any other Minetest/Luanti game.
 
-Minetest Game is always compatible to the latest stable release of the engine.
-Older releases may be supported too depending on circumstances.
+Q: Which version of Luanti is it compatible with?
+A: Version 5.8 or later.
 
-## Licensing
+Q: Under what license is the game released?
+A: Code is under LGPL 2.1 or later, assets under CC-BY-SA-3.0 (see Credits section). The included mods have their own licenses.
 
-See `LICENSE.txt`
+License
+Code: LGPL 2.1 or later
+Textures, sounds, and models: see each mod for its license.
