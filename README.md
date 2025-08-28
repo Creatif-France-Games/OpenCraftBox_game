@@ -1,4 +1,4 @@
-Overview
+# Overview
 OpenCraftBox Game is based on Minetest Game, with additions and improvements to provide a richer experience right from the start.
 
 It currently includes by default:
@@ -14,7 +14,7 @@ Add tools and automation systems from the start.
 
 Stay close to Minetest Game to maintain compatibility with existing mods.
 
-Installation
+# Installation
 Download this repository.
 
 Extract the folder.
@@ -23,7 +23,7 @@ Place the OpenCraftBox_game folder into the games folder of Luanti.
 
 Launch Minetest and select OpenCraftBox Game in the games menu.
 
-Credits
+# Credits
 Based on Minetest Game — © 2010-2025, the Luanti team (LGPL 2.1+)
 
 Unified Inventory
@@ -39,7 +39,8 @@ Author: Jean-Patrick Guerrero (kilbith)
 
 License: CC-BY-SA-3.0
 
-FAQ
+
+# FAQ
 Q: What’s the difference from Minetest Game?
 A: OpenCraftBox Game includes Unified Inventory and Mesecons by default, as well as other upcoming adjustments, to offer more tools and features right from the start.
 
