@@ -1,10 +1,10 @@
--- Définition du privilège 'clearinv'
+-- Set 'clearinv' priv
 minetest.register_privilege("clearinv", {
     description = "Permission to clear inventories using /ocb_clearinv",
     give_to_singleplayer = false,
 })
 
--- Commande /ocb_day : passe au jour (seulement pour les admins avec privilège 'server')
+-- Switch to day (only for admins)
 minetest.register_chatcommand("ocb_day", {
     description = "Set time to day (only for admins)",
     privs = {server = true},
@@ -14,17 +14,17 @@ minetest.register_chatcommand("ocb_day", {
     end,
 })
 
--- Commande /ocb_night : passe à la nuit (seulement pour les admins avec privilège 'server')
+-- Switch to the night (only for admins)
 minetest.register_chatcommand("ocb_night", {
     description = "Set time to night (only for admins)",
     privs = {server = true},
     func = function(name)
-        minetest.set_timeofday(0.75)
+        minetest.set_timeofday(1.0)
         return true, "Time set to night."
     end,
 })
 
--- Commande /ocb_clearinv [player] : vide l'inventaire d'un joueur, nécessite privilège 'clearinv'
+-- Clear the inventory of a player (need clearinv priv)
 minetest.register_chatcommand("ocb_clearinv", {
     params = "[playername]",
     description = "Clear inventory of player (or yourself if no name) - requires 'clearinv' privilege",
@@ -43,5 +43,30 @@ minetest.register_chatcommand("ocb_clearinv", {
         inv:set_list("craft", {})
         inv:set_list("craftpreview", {})
         return true, "Inventory cleared for player " .. target_name
+    end,
+})
+
+-- Command /ocb_heal : heals a player (yourself or another one)
+minetest.register_chatcommand("ocb_heal", {
+    description = "Heal the specified player, or yourself if left empty",
+    privs = {server = true}, -- restricted to admins
+    params = "[playername]",
+    func = function(name, param)
+        local target_name = param ~= "" and param or name
+        local target = minetest.get_player_by_name(target_name)
+
+        if not target then
+            return false, "Player '" .. target_name .. "' not found."
+        end
+
+        local max_hp = target:get_properties().hp_max or 20
+        target:set_hp(max_hp)
+
+        if target_name == name then
+            return true, "You have been fully healed."
+        else
+            minetest.chat_send_player(target_name, "You have been healed by " .. name .. ".")
+            return true, "You healed " .. target_name .. "."
+        end
     end,
 })
